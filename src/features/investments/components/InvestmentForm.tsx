@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import AmountSlider from "./AmountSlider";
 import FundDropdown from "./FundDropdown";
-import Button from "./Button";
+import Button from "../../../components/Button";
 
 const InvestmentForm: React.FC = () => {
 
@@ -22,7 +22,7 @@ const InvestmentForm: React.FC = () => {
 
 
     return (
-        <form className="max-w-md p-6 bg-white shadow rounded space-y-6 mx-auto ">
+        <form className="max-w-5xl h-96 p-6 bg-formBackground shadow rounded space-y-6 mx-auto mt-10">
             <FundDropdown 
                 options={fundOptions}
                 label={label}

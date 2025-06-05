@@ -9,7 +9,7 @@ type FundDropdownProps = {
 
 const FundDropdown: React.FC<FundDropdownProps> = () => {
     return (
-        <div>
+        <div className="">
         <label htmlFor="fund" className="block text-sm font-medium text-gray-700">Choose a Fund</label>
         <select id="fund" className="mt-1 block w-full rounded border-gray-300 shadow-sm">
           <option>Cushon Equities Fund</option>
