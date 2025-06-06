@@ -6,7 +6,7 @@ module.exports = {
       colors: {
         mainBackground: '#FFFFFF',
         formBackground: '#F5F0F3',
-        headerBackground: '#DC1E83',
+        Purple: '#DC1E83',
       },
     },
   },

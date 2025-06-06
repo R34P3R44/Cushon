@@ -4,18 +4,18 @@ import { leftLinks, navLinks, HeaderItemType } from '../constants/headerLinks';
 const Header: React.FC = () => {
 
   return (
-    <header className="bg-headerBackground shadow-sm h-24">
-      <div className="min-w-6xl w-auto mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+    <header className="bg-Purple shadow-sm h-auto">
+      <div className="min-w-1xl w-auto mx-auto px-5 sm:px-5  flex items-center justify-between">
 
         {/* Left Section */}
 
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-8">
           {leftLinks.map((item, idx) => {
             switch (item.type) {
               case HeaderItemType.Image:
                 return (
                   <a key={idx} href={item.href} aria-label={item.alt}>
-                    <img src={item.src} alt={item.alt} className="h-auto w-full max-w-[220px] pb-1" />
+                    <img src={item.src} alt={item.alt} className="h-auto min-w-32 w-full max-w-[220px]" />
                   </a>
                 );
               case HeaderItemType.Link:
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
                   <a
                     key={idx}
                     href={item.href}
-                    className="text-white hover:text-gray-200 transition-colors"
+                    className="text-white hover:text-gray-200 transition-colors flex self-end pb-3"
                   >
                     {item.text}
                   </a>
@@ -45,7 +45,7 @@ const Header: React.FC = () => {
 
         {/* Desktop Nav */}
 
-        <nav className="hidden md:flex space-x-6 text-white font-normal">
+        <nav className="flex self-end pb-3 md: space-x-8 text-white font-normal">
           {navLinks.map((item, idx) => {
             switch (item.type) {
               case HeaderItemType.Link:

@@ -1,16 +1,20 @@
+import Button from "@mui/material/Button";
 import React from "react";
 
 type ButtonProps = {
-    text: string;
-    onClick: () => void
-  }
+  text: string;
+  error: React.RefObject<boolean>;
+  
+}
 
-const Button: React.FC<ButtonProps> = () => {
-    return (
-        <div>
-            <button className="w-full bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700">Submit</button>
-      </div>
-)
+const Buttons: React.FC<ButtonProps> = ({error}) => {
+  return (
+    <div className="w-auto flex justify-end">
+      <Button type="submit" variant="contained" color="primary" disabled={error.current}>
+        Invest Now
+      </Button>
+    </div>
+  )
 };
 
-export default Button;
+export default Buttons;

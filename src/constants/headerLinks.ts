@@ -7,7 +7,7 @@ export enum HeaderItemType {
   export const leftLinks = [
     {
       type: HeaderItemType.Image,
-      src: '/logo.png',
+      src: '/CushonLogo.png',
       alt: 'Cushon Logo',
       href: '/',
     },
@@ -21,36 +21,13 @@ export enum HeaderItemType {
       text: 'Workplace ISAs & savings',
       href: '#workplace-isas-savings',
     },
-    {
-      type: HeaderItemType.Button,
-      text: 'More',
-    },
   ];
   
   export const navLinks = [
     {
       type: HeaderItemType.Link,
-      text: 'About',
-      href: '#funds',
-    },
-    {
-      type: HeaderItemType.Link,
       text: 'Resources',
       href: '#how-it-works',
-    },
-    {
-      type: HeaderItemType.Link,
-      text: 'Help',
-      href: '#help',
-    },
-    {
-      type: HeaderItemType.Link,
-      text: 'Contact',
-      href: '#contact',
-    },
-    {
-      type: HeaderItemType.Button,
-      text: 'Search',
     },
     {
       type: HeaderItemType.Button,
@@ -58,6 +35,6 @@ export enum HeaderItemType {
     },
     {
       type: HeaderItemType.Button,
-      text: 'Login',
+      text: 'Logout',
     },
   ];
