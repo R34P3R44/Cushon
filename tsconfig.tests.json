@@ -1,0 +1,9 @@
+{
+    "extends": "./tsconfig.app.json",
+    "compilerOptions": {
+      "jsx": "react-jsx",
+      "types": ["@playwright/test"],
+      "moduleResolution": "node"
+    },
+    "include": ["tests/**/*.ts", "tests/**/*.tsx"]
+  }

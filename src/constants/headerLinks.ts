@@ -25,16 +25,10 @@ export enum HeaderItemType {
   
   export const navLinks = [
     {
-      type: HeaderItemType.Link,
-      text: 'Resources',
-      href: '#how-it-works',
-    },
-    {
       type: HeaderItemType.Button,
-      text: 'Get Started',
-    },
-    {
-      type: HeaderItemType.Button,
-      text: 'Logout',
+      text: 'Log out',
     },
   ];
+
+
+  export const ISA_MAX = 20000;

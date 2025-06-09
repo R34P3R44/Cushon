@@ -1,14 +1,15 @@
 import React from "react";
-import InvestmentPage from "../features/investments/pages/InvestmentPage";
 import Header from "./Header";
+import { Outlet } from "react-router-dom";
 
 const Layout: React.FC = () => {
 
-    
     return (
         <>
             <Header/>
-            <InvestmentPage/>
+            <main>
+                <Outlet/>
+            </main>
         </>
     )
 };

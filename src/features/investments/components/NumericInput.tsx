@@ -6,19 +6,31 @@ type NumericInputProps = {
     handleChange: (value: React.ChangeEvent<HTMLInputElement>) => void;
     input: string;
     handleBlur: (e: React.FocusEvent<HTMLInputElement>) => void;
-    error: React.RefObject<boolean>;
+    error: { minimum: boolean; maximum: boolean; };
 }
 
 const NumericInput: React.FC<NumericInputProps> = ({ handleChange, input, handleBlur, error }) => {
+
+    const handleErrorLabel = () => {
+        if(error.minimum) {
+            return "Minimum deposit is £1.00"
+        }
+        if(error.maximum) {
+            return "Maximum deposit is £20,000.00"
+        }
+        else {
+            return "Amount (Minimum deposit is £1.00)"
+        }
+    }
 
     return (
         <>
             <FormControl fullWidth>
                 <TextField
-                    error={error.current}
+                    error={error.maximum || error.minimum}
                     required
                     className="bg-white"
-                    label={error.current ? "Minimum deposit is £100.00" : "Amount (Minimum deposit is £100.00)"}
+                    label={handleErrorLabel()}
                     type="text"
                     value={input}
                     onChange={handleChange}

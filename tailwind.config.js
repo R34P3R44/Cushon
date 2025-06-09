@@ -6,8 +6,14 @@ module.exports = {
       colors: {
         mainBackground: '#FFFFFF',
         formBackground: '#F5F0F3',
-        Purple: '#DC1E83',
+        purple: '#DC1E83',
       },
+      boxShadow: {
+        'pink-outline': '0 0 0 3px rgba(220,30,131,1)',
+      },
+      borderColor: {
+        'grey-border': 'rgb(196, 196, 196)'
+      }
     },
   },
   plugins: [],

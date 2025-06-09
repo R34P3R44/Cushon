@@ -1,54 +1,65 @@
-# React + TypeScript + Vite
+# Investment App (React + Vite + TypeScript)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a modern web application built with **React**, **Vite**, and **TypeScript**.  
+It allows users to authenticate and manage their investment portfolio through a clean, modular UI.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 **User Authentication**  
+  Login and manage user sessions with lightweight global state.
 
-## Expanding the ESLint configuration
+- 📈 **Investments Dashboard**  
+  Add and manage investments using interactive forms with sliders, dropdowns, and visual indicators.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- ⚡ **React Query (TanStack Query)**  
+  Efficient data fetching, caching, and background updates for server state.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- 🗂️ **Modular Architecture**  
+  Feature-based folder structure for scalability and maintainability.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- 🛠️ **Vite + TypeScript**  
+  Fast development experience, optimized builds, and type-safe codebase.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Getting Started
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+clone repo
+
+npm install
+
+npm run dev
+
+Projetc Structure:
+
+src/
+├── components/          # Reusable UI components
+├── features/            # Feature-based folders (auth, investments)
+├── layout/              # App layout components
+├── store/               # Global state management
+├── utils/               # Utility functions
+├── App.tsx              # Main app component
+└── main.tsx             # Entry point
+
+
+Notes:
+
+Automated testing (unit and integration) is planned but not yet implemented.
+
+Form validation and accessibility improvements are under consideration for future iterations.
+
+The app uses React Query to manage server state for investment data and mutations.
+
+Lightweight global state is used only where necessary (e.g. authentication).
+
+
+Enhancements for future:
+* Testing:
+    * Currently, there is no test setup (Vitest / React Testing Library not included yet).
+    * I considered adding unit tests and integration tests but prioritized building feature completeness first.
+* Form validation:
+    * Investment forms seem to lack full form validation (no form libraries like React Hook Form visible yet).
+* Accessibility (a11y):
+    * Could be improved — no ARIA roles, keyboard navigation, or focus management is shown.
+* CI/CD pipeline:
+    * No configuration for automated testing, linting, or CI pipeline is shown in the repo.
+* Error boundaries:
+    * The app lacks React error boundaries to catch and display UI-level errors gracefully.
